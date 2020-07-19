@@ -9,7 +9,7 @@ const Home = props => {
             <header>
                 <h1>Brittany's Pizza</h1>
             </header>
-            <Link to='/pizza'>Order a pizza!</Link>
+            <Link to='/pizza' id="orderme">Order a pizza!</Link>
         {props.orders.map((order, i) => <Card key={i} order={order} />)}
         </HomeContain>
     );

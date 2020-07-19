@@ -79,11 +79,11 @@ const Form = props => {
             <h1>Place Your Order!</h1>
             <form onSubmit={handleSubmit}>
             <label>Name:  
-                <input type='text' name='name' onChange={handleChange} data-cy='name' value={formState.name} />
+                <input type='text' name='name' onChange={handleChange}  value={formState.name} id="name" />
                 {errors.name.length > 0 && <p style={{color:'red'}}>{errors.name}</p>}
             </label>
             <label>Desired Size:  
-                <select name='size' data-cy='size' defaultValue='Large' onChange={handleChange}>
+                <select name='size' id='size' defaultValue='Large' onChange={handleChange}>
                     <option value='Small'>Small</option>
                     <option value='Medium'>Medium</option>
                     <option value='Large'>Large</option>
@@ -94,31 +94,31 @@ const Form = props => {
             <fieldset>
                 <h3 className="top">Toppings</h3>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='pepperoni' value='pepperoni' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='pepperoni' value='pepperoni' />
                     Pepperoni
                 </label>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='bacon' value='bacon' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='bacon' value='bacon' />
                     Bacon
                 </label>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='peppers' value='peppers' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='peppers' value='peppers' />
                     Green Peppers
                 </label>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='onion' value='onion' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='onion' value='onion' />
                     Onions
                 </label>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='tomato' value='tomato' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='tomato' value='tomato' />
                     Tomatoes
                 </label>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='spinach' value='spinach' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='spinach' value='spinach' />
                     Spinach
                 </label>
                 <label>
-                    <input type='checkbox' name='toppings' onChange={handleChange} data-cy='xcheese' value='xcheese' />
+                    <input type='checkbox' name='toppings' onChange={handleChange} id='xcheese' value='xcheese' />
                     Extra Cheese
                 </label>
               
@@ -126,7 +126,7 @@ const Form = props => {
             <label> Special Instructions: 
                 <textarea name='instructions' data-cy='instructions' onChange={handleChange} value={formState.instructions} />
             </label>
-            <button data-cy="submit-button" disabled={isDisabled} type='submit'>Add To Order</button>
+            <button id="submit-button" disabled={isDisabled} type='submit'>Add To Order</button>
             </form>
         </FormContainer>
     );
